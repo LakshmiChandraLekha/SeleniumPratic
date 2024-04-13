@@ -23,9 +23,12 @@ public class Dropdown {
         Select dropdownlist = new Select(drop);
         dropdownlist.selectByVisibleText("Option 1");
         Thread.sleep(3000);
-        dropdownlist.selectByVisibleText("Option 2");
         String selectedoption = dropdownlist.getFirstSelectedOption().getText();
-       Assert.assertEquals(selectedoption,"Option 1");
+        System.out.println(selectedoption);
+        dropdownlist.selectByVisibleText("Option 2");
+        String selectedoption1 = dropdownlist.getFirstSelectedOption().getText();
+        System.out.println(selectedoption1);
+       Assert.assertEquals(selectedoption1,"Option 2");
 
 
     }
